@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --main-bg-color: #E6E6E6;
+  --filters-bg-color: #7c0000;
+}
+
+body{
+  background-color: var(--main-bg-color);
+}
+
+.section__hotels {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.section__header {
+  background-color: var(--main-bg-color);
+  padding: 1rem;
+  h1{
+    text-align: center;
+    color: var(--filters-bg-color);
+    font-weight: bold;
+    margin-bottom: 2%;
+  }
+  .filtersDescription{
+    font-weight: bold;
+  }
+}
+
+.section__filters {
+  background-color: var(--filters-bg-color);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  input, select, .btn{
+    height: 1.3rem;
+  }
+
+  .btn{
+    border: 0px;
+    border-radius: 10px;
+    padding: 0px;
+    background-color: white
+  }
+
+  @media (min-width: 513px) { 
+    flex-direction: row;
+    flex-wrap: wrap;
+    .btn{
+      height: unset;
+      padding: 10px;}
+  }
+
+}
+
+
+.section__filters input,
+.section__filters select {
+  margin: 0.5rem;
+  min-width: 15%;
+}
+
+.dateWrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    color: white;
+  }
+
+  input {
+    flex-grow: 1;
+  }
+}
+
+.font_off {
+  opacity: 0.4;
+}
+
+.noHotels{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--filters-bg-color);
+}
